@@ -7,16 +7,17 @@
 ##############################################*/
 body {
     font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     text-align: left;
 }
 
 .siteContent {
-    width: 1000px;
+    width: 800px;
     margin: 0 auto;
 }
 
-.sectionHeader {
+.sectionHeader
+{
     margin: 20px 0px;
 }
 
@@ -29,90 +30,80 @@ body {
     border: 1px solid #DDDDDD;
 }
 
-.leftSectionNoBorder {
-    float: left;
-    width: 170px;
-    height: 500px;
-    margin-right: 10px;
-    display: block;
-}
-
 .rightSection {
     float: left;
-    width: 800px;
+    width: 600px;
 }
 
-.rowClass {
+.rowClass
+{
     height: 1%;
     border: 1px solid #DDDDDD;
     margin-bottom: 10px;
 }
 
-.rowClassNoBorder {
-    height: 1%;
-    margin-bottom: 10px;
-}
-
-.rowTitle {
+.rowTitle
+{
     color: #333333;
     margin: 0px;
     padding: 10px;
 }
 
-.rowContent {
-}
+.rowContent
+{
+}   
 
-.labelText {
+.labelText
+{
     float: left;
     margin: 0px;
 }
 
-.rowQuestion {
+.rowQuestion
+{
     margin: 5px 0 5px 20px;
 
 }
-
-.labelText {
+.labelText
+{
     width: 140px;
 }
 
-.optionPanel {
+.optionPanel
+{
     padding: 10px;
     border-top: 1px solid #DDDDDD;
     text-align: right;
 }
 
-.optionPanelNoBorder {
-    padding: 10px;
-    text-align: right;
-}
-
-.generatedQuestionContent {
+.generatedQuestionContent
+{
     padding: 10px;
 }
 
-.rowContent input[name='temporaryTitle'], .rowContent input[name='temporaryHelpText'] {
+.rowContent input[name='test']
+{
     width: 93%;
     margin: 10px 10px 0px 10px;
 }
 
-.rowContent input[name='temporaryTitle'], .rowContent input[name='temporaryHelpText'] {
-    text-align: left;
-}
-
-.titleInputRow .rowContent {
+.rowContent input[name='test']
+{
     text-align: right;
 }
 
-.margin10 {
+.titleInputRow .rowContent
+{
+    text-align: right;
+}
+
+.margin10
+{
     margin: 10px;
 }
 
-.notAllowedinputClass {
+.titleInputClass
+{
     font-style: italic;
-    cursor: not-allowed;
-}
-
-.pointerClass {
     cursor: pointer;
 }
