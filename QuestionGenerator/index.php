@@ -43,7 +43,7 @@
                <div class="rowContent">
                   <div class="rowQuestion">
                      <p class="labelText">Name:</p>
-                     <input type="text" name="sessionName" title="Please specify the session name" class="ui-corner-all"
+                     <input type="text" name="sessionName" id="sessionName" title="Please specify the session name" class="ui-corner-all"
                             size="35">
 
                      <br clear="all"/>
