@@ -7,17 +7,16 @@
 ##############################################*/
 body {
     font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     text-align: left;
 }
 
 .siteContent {
-    width: 800px;
+    width: 1000px;
     margin: 0 auto;
 }
 
-.sectionHeader
-{
+.sectionHeader {
     margin: 20px 0px;
 }
 
@@ -30,80 +29,90 @@ body {
     border: 1px solid #DDDDDD;
 }
 
-.rightSection {
+.leftSectionNoBorder {
     float: left;
-    width: 600px;
+    width: 170px;
+    height: 500px;
+    margin-right: 10px;
+    display: block;
 }
 
-.rowClass
-{
+.rightSection {
+    float: left;
+    width: 800px;
+}
+
+.rowClass {
     height: 1%;
     border: 1px solid #DDDDDD;
     margin-bottom: 10px;
 }
 
-.rowTitle
-{
+.rowClassNoBorder {
+    height: 1%;
+    margin-bottom: 10px;
+}
+
+.rowTitle {
     color: #333333;
     margin: 0px;
     padding: 10px;
 }
 
-.rowContent
-{
-}   
+.rowContent {
+}
 
-.labelText
-{
+.labelText {
     float: left;
     margin: 0px;
 }
 
-.rowQuestion
-{
+.rowQuestion {
     margin: 5px 0 5px 20px;
 
 }
-.labelText
-{
+
+.labelText {
     width: 140px;
 }
 
-.optionPanel
-{
+.optionPanel {
     padding: 10px;
     border-top: 1px solid #DDDDDD;
     text-align: right;
 }
 
-.generatedQuestionContent
-{
+.optionPanelNoBorder {
+    padding: 10px;
+    text-align: right;
+}
+
+.generatedQuestionContent {
     padding: 10px;
 }
 
-.rowContent input[name='test']
-{
+.rowContent input[name='temporaryTitle'], .rowContent input[name='temporaryHelpText'] {
     width: 93%;
     margin: 10px 10px 0px 10px;
 }
 
-.rowContent input[name='test']
-{
+.rowContent input[name='temporaryTitle'], .rowContent input[name='temporaryHelpText'] {
+    text-align: left;
+}
+
+.titleInputRow .rowContent {
     text-align: right;
 }
 
-.titleInputRow .rowContent
-{
-    text-align: right;
-}
-
-.margin10
-{
+.margin10 {
     margin: 10px;
 }
 
-.titleInputClass
-{
+.notAllowedinputClass {
     font-style: italic;
+    cursor: not-allowed;
+}
+
+.pointerClass {
     cursor: pointer;
 }
