@@ -37,13 +37,14 @@
       </div>
       <div class="rightSection">
          <form action="" method="get" name="" id="myform">
-            <div class="rowClassNoBorder">
+              <div class="rowClassNoBorder">
                <p class="rowTitle ui-widget-header ui-corner-top">Question Details</p>
-
+			  </div>
+              <div class="rowClassBorder">
                <div class="rowContent">
                   <div class="rowQuestion">
                      <p class="labelText">Name:</p>
-                     <input type="text" name="sessionName" id="sessionName" title="Please specify the session name" class="ui-corner-all"
+                     <input type="text" name="sessionName" id="sessionName" title="Please specify the session name" class=""
                             size="35">
 
                      <br clear="all"/>
@@ -51,20 +52,22 @@
                   <div class="rowQuestion">
                      <p class="labelText">Session Entry:</p>
                      <input type="text" name="sessionEntry" id="sessionEntry"
-                            title="Please specify the session entry E.g DRIVERS,0" class="ui-corner-all" size="35">
+                            title="Please specify the session entry E.g DRIVERS,0" class="" size="35">
                      <br clear="all"/>
                   </div>
                </div>
             </div>
             <div class="rowClassNoBorder">
                <p class="rowTitle ui-widget-header ui-corner-top">Question Generator</p>
-
+			</div>   
+            <div class="rowClassBorder">
                <div class="rowContent">
                   <div class="generatedQuestionContent">
                      <input class="notAllowedinputClass" type="text" name="" id="title" value="Title..." readonly
                             disabled="true">
                      <img src="css/images/edit.ico" class="pointerClass" id="editTitleImage">
-
+                     <br />
+					 <br />
                      <input class="notAllowedinputClass" type="text" name="" id="help" value="Help text..." readonly
                             disabled="true">
                      <img src="css/images/help.png" class="pointerClass" id="editHelpTextImage">
@@ -76,29 +79,35 @@
 
             </div>
             <!-- edit Title -->
-            <div class="rowClassNoBorder titleInputRow" id="editTitleDiv" style="display: none;">
-               <p class="rowTitle ui-state-default ui-corner-all">Question Title</p>
-
-               <div class="rowContent">
-                  <input type="text" name="temporaryTitle" id="temporaryTitle">
-                  <br clear="all"/>
-                  <button class='margin10' type="button" name="clearTitle" id="clearTitle">Clear</button>
-                  <button class='margin10' type="button" name="cancelTitle" id="cancelTitle">Cancel</button>
-                  <button class='margin10' type="button" name="saveTitle" id="saveTitle">Save Title</button>
-               </div>
-            </div>
+			<div class="" id="editTitleDiv" style="display: none;">
+				<div class="rowClassNoBorder">
+				   <p class="rowTitle ui-widget-header ui-corner-top">Question Title</p>
+				</div>
+				<div class="rowClassBorder textAlignRight">
+				   <div class="rowContent">
+					  <input type="text" name="temporaryTitle" id="temporaryTitle">
+					  <br clear="all"/>
+					  <button class='margin10' type="button" name="clearTitle" id="clearTitle">Clear</button>
+					  <button class='margin10' type="button" name="cancelTitle" id="cancelTitle">Cancel</button>
+					  <button class='margin10' type="button" name="saveTitle" id="saveTitle">Save Title</button>
+				   </div>
+				</div>
+			</div>
             <!-- edit Help Text -->
-            <div class="rowClassNoBorder titleInputRow" id="editHelpTextDiv" style="display: none;">
-               <p class="rowTitle ui-state-default ui-corner-all">Help Text</p>
-
-               <div class="rowContent">
-                  <input type="text" name="temporaryHelpText" id="temporaryHelpText">
-                  <br clear="all"/>
-                  <button class='margin10' type="button" name="clearHelp" id="clearHelp">Clear</button>
-                  <button class='margin10' type="button" name="cancelHelp" id="cancelHelp">Cancel</button>
-                  <button class='margin10' type="button" name="saveHelp" id="saveHelp">Save Help Text</button>
-               </div>
-            </div>
+			<div id="editHelpTextDiv" style="display: none;">
+				<div class="rowClassNoBorder">
+				   <p class="rowTitle ui-widget-header ui-corner-top">Help Text</p>
+                </div>
+				<div class="rowClassBorder textAlignRight">
+				   <div class="rowContent">
+					  <input type="text" name="temporaryHelpText" id="temporaryHelpText">
+					  <br clear="all"/>
+					  <button class='margin10' type="button" name="clearHelp" id="clearHelp">Clear</button>
+					  <button class='margin10' type="button" name="cancelHelp" id="cancelHelp">Cancel</button>
+					  <button class='margin10' type="button" name="saveHelp" id="saveHelp">Save Help Text</button>
+				   </div>
+				</div>
+			</div>
          </form>
          <br clear="all"/>
       </div>
