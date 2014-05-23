@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
 <!-- [Start Head] -->
@@ -63,18 +63,24 @@
             <div class="rowClassBorder">
                <div class="rowContent">
                   <div class="generatedQuestionContent">
-                     <input class="notAllowedinputClass" type="text" name="" id="title" value="Title..." readonly
-                            disabled="true">
-                     <img src="css/images/edit.ico" class="pointerClass" id="editTitleImage">
-                     <br />
-					 <br />
-                     <input class="notAllowedinputClass" type="text" name="" id="help" value="Help text..." readonly
-                            disabled="true">
-                     <img src="css/images/help.png" class="pointerClass" id="editHelpTextImage">
+				     
+					 <div class="divClass" id="resizable" style="float: left; width:250px;">Title...<img src="css/images/edit.ico" class="pointerClass" id="editTitleImage" width="16px" height="16px"></div>
+                     
+                     
+                     <div class="divClass" id="help" style="float: right; width:250px">Help text...<img src="css/images/help.png" class="pointerClass" id="editHelpTextImage"></div>
+				
+					 <div class="divClass" id="input" >Input type...<img src="css/images/edit.ico" class="pointerClass" id="editInputType" width="16px" height="16px"></div>
+                  
                   </div>
                   <div class="optionPanel">
-                     <button type="submit" id="saveQuestion">Save Question</button>
+				     <button type="submit" id="saveQuestion">Save Question</button> 
+				     <div style="display: none;" id="feedbackId"> 
+				        <img src="css/images/small_tick.png" class="marginRight5" id=""><span class="marginRight5">Success</span>
+				        <img src="css/images/cancel.png" class="marginRight5" id=""><span class="marginRight5">Failed</span>
+					 </div>
+                     
                   </div>
+				  
                </div>
 
             </div>
@@ -90,6 +96,35 @@
 					  <button class='margin10' type="button" name="clearTitle" id="clearTitle">Clear</button>
 					  <button class='margin10' type="button" name="cancelTitle" id="cancelTitle">Cancel</button>
 					  <button class='margin10' type="button" name="saveTitle" id="saveTitle">Save Title</button>
+				   </div>
+				</div>
+			</div>
+			<!-- edit Input Type -->
+			<div id="editInputTypeDiv" style="display: none;">
+				<div class="rowClassNoBorder">
+				   <p class="rowTitle ui-widget-header ui-corner-top">Input type</p>
+                </div>
+				<div class="rowClassBorder">
+				   <div class="rowQuestion">
+				   <br clear="all"/>
+					  Select input types:
+					  <select>
+					      <option value="" selected>Please select...</option>
+						  <option value="L">Label</option>
+						  <option value="R">Radio button</option>
+						  <option value="C">Checkbox</option>
+						  <option value="S">Select</option>
+					</select>
+					
+					<button class='margin10' type="button" name="" id="">Add input</button>
+					  
+					  <br clear="all"/>
+					  <br clear="all"/>
+					  <div class="textAlignRight">
+						  <button class='margin10' type="button" name="clearHelp" id="clearInputType">Clear</button>
+						  <button class='margin10' type="button" name="cancelHelp" id="cancelInputType">Cancel</button>
+						  <button class='margin10' type="button" name="saveHelp" id="saveInputType">Save Help Text</button>
+					  </div>
 				   </div>
 				</div>
 			</div>

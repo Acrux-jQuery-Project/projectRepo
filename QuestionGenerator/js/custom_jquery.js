@@ -18,6 +18,9 @@ $(document).ready(function () {
         var a = document.getElementById('temporaryTitle');
         var b = document.getElementById('title');
         b.value = a.value;
+		
+		//display feedback
+		
     });
 
     //      clear button 
@@ -56,6 +59,16 @@ $(document).ready(function () {
     $("#cancelHelp").click(function () {
         $("#editHelpTextDiv").hide("slow");
     });
+	
+	    //		show editInputTypeDiv div 	
+    $("#editInputType").click(function () {
+        $("#editInputTypeDiv").show("slow");
+    });
+
+    //		hide editInputTypeDiv div 
+    $("#cancelInputType").click(function () {
+        $("#editInputTypeDiv").hide("slow");
+    });
 
     $("#saveHelp").click(function () {
         $("#editHelpTextDiv").hide("slow");
@@ -63,6 +76,21 @@ $(document).ready(function () {
         var b1 = document.getElementById('help');
         b1.value = a1.value;
     });
+	
+	//resize inputs
+	$(function() {
+		$( "#title" ).resizable({
+		  handles: "se",
+		  animate: true,
+		  maxHeight: 200,
+		  maxWidth: 200,
+		  minHeight: 100,
+		  minWidth: 100,
+		  aspectRatio: 16 / 9,
+		  helper: "resizable-helper"
+		});
+    });
+	
 
     //send Ajax - POST
     $("#saveQuestion").click(function () {
@@ -80,7 +108,15 @@ $(document).ready(function () {
             url: "php/QuestionGenerator.php",
             data: ajaxObject,
             success: function (response) {
-                alert(response);
+			
+			    var JSONObject = JSON.parse(response);
+				var feedbackDiv = document.getElementById("feedbackId");
+				
+                if(JSONObject.message == 'Success')
+                {	   
+					feedbackDiv.style.display = 'block';
+					
+				}
             },
             error: function () {
                 alert("ERROR !");

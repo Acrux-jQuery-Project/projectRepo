@@ -84,7 +84,7 @@ body {
 .optionPanel {
     padding: 10px;
     border-top: 1px solid #DDDDDD;
-    text-align: right;
+	text-align: right;
 }
 
 .optionPanelNoBorder {
@@ -113,6 +113,10 @@ body {
     margin: 10px;
 }
 
+.marginRight5 {
+    margin-right: 5px;
+}
+
 .notAllowedinputClass {
     font-style: italic;
     cursor: not-allowed;
@@ -124,4 +128,18 @@ body {
 
 .pointerClass {
     cursor: pointer;
+	float: right; 
+}
+
+.feedback {
+    padding: 10px;
+	display: block;
+}
+
+.divClass {
+    border: 1px solid #DDDDDD;
+	padding: 5px;
+	font-style:italic;
+	height: 16px;
+	margin: 5px;
 }
