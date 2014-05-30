@@ -51,7 +51,7 @@ $(document).ready(function () {
     });
 
     //		show editHelpTextDiv div 	
-    $("#editHelpTextImage").click(function () {
+    $("#editHelpTextImage, #help").click(function () {
         $("#editHelpTextDiv").show("slow");
     });
 
@@ -60,8 +60,8 @@ $(document).ready(function () {
         $("#editHelpTextDiv").hide("slow");
     });
 	
-	    //		show editInputTypeDiv div 	
-    $("#editInputType").click(function () {
+	 //		show editInputTypeDiv div 	
+    $("#editInputType, #input").click(function () {
         $("#editInputTypeDiv").show("slow");
     });
 
@@ -76,21 +76,6 @@ $(document).ready(function () {
         var b1 = document.getElementById('help');
         b1.value = a1.value;
     });
-	
-	//resize inputs
-	$(function() {
-		$( "#title" ).resizable({
-		  handles: "se",
-		  animate: true,
-		  maxHeight: 200,
-		  maxWidth: 200,
-		  minHeight: 100,
-		  minWidth: 100,
-		  aspectRatio: 16 / 9,
-		  helper: "resizable-helper"
-		});
-    });
-	
 
     //send Ajax - POST
     $("#saveQuestion").click(function () {

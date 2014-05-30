@@ -70,6 +70,7 @@ body {
 .labelText {
     float: left;
     margin: 0px;
+	width: 140px;
 }
 
 .rowQuestion {
@@ -77,14 +78,24 @@ body {
 
 }
 
-.labelText {
-    width: 140px;
+.labelOption {
+    margin: 0px;
+	width: 100px;
 }
 
 .optionPanel {
     padding: 10px;
     border-top: 1px solid #DDDDDD;
 	text-align: right;
+}
+
+.optionInputPanel {
+    padding: 10px;
+    border-top: 1px solid #DDDDDD;
+	border-bottom: 1px solid #DDDDDD;
+	text-align: left;
+	font-weight: bold;
+    color: #333;
 }
 
 .optionPanelNoBorder {
@@ -126,6 +137,14 @@ body {
     text-align: right;
 }
 
+.textAlignLeft{
+    text-align: left;
+}
+
+.textAlignCenter{
+    text-align: center;
+}
+
 .pointerClass {
     cursor: pointer;
 	float: right; 
@@ -142,4 +161,37 @@ body {
 	font-style:italic;
 	height: 16px;
 	margin: 5px;
+}
+
+/*
+  Hide radio button (the round disc)
+  we will use just the label to create pushbutton effect
+*/
+.optionInputPanel input[type=radio] {
+    display:none; 
+    margin:10px;
+}
+ 
+/*
+  Change the look'n'feel of labels (which are adjacent to radiobuttons).
+  Add some margin, padding to label
+*/
+.optionInputPanel input[type=radio] + label {
+    display:inline-block;
+    margin:-2px;
+    padding: 4px 12px;
+    background-color: #e7e7e7;
+    border-color: #ddd;
+}
+/*
+ Change background color for label next to checked radio button
+ to make it look like highlighted button
+*/
+.optionInputPanel input[type=radio]:checked + label { 
+   background-image: none;
+   background-color:#BCE954;
+}
+
+button span{
+   font-weight: bold;
 }
