@@ -5,16 +5,17 @@
 <head>
    <meta charset="UTF-8">
    <title>Question generator</title>
-   <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
-   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-   <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-   <link rel="stylesheet" type="text/css" href="css/style.css">
-   <script type="text/javascript" src="js/custom_jquery.js"></script>
 
-   <!-- Bootstrap -->
-   <!--  <link rel="stylesheet" type="text/css" href="css/jquery-ui.css"> -->
-   <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-   <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script> -->
+   <!-- start css included -->
+   <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+   <!-- end css included -->
+
+   <!-- start js included -->
+   <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+   <script type="text/javascript" src="js/jquery-ui.js"></script>
+   <script type="text/javascript" src="js/custom_jquery.js"></script>
+   <!-- end js included -->
 
 </head>
 <!-- [End Head] -->

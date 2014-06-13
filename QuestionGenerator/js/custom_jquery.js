@@ -1,112 +1,124 @@
-$(document).ready(function () {
-    // tooltip			
-    //$(document).tooltip({ position: "center right"});
+$(document).ready(function ()
+{
+   // tooltip
+   //$(document).tooltip({ position: "center right"});
 
-    //		show editTitleDiv div 	
-    $("#editTitleImage, #title").click(function () {
-        $("#editTitleDiv").show("slow");
-    });
+   //		show editTitleDiv div
+   $("#editTitleImage, #title").click(function ()
+   {
+      $("#editTitleDiv").show("slow");
+   });
 
-    //		hide editTitleDiv div 
-    $("#cancelTitle").click(function () {
-        $("#editTitleDiv").hide("slow");
-    });
+   //		hide editTitleDiv div
+   $("#cancelTitle").click(function ()
+   {
+      $("#editTitleDiv").hide("slow");
+   });
 
-    //      save temporaryTitle on title input   
-    $("#saveTitle").click(function () {
-        $("#editTitleDiv").hide("slow");
-        var a = document.getElementById('temporaryTitle');
-        var b = document.getElementById('title');
-        b.value = a.value;
-		
-		//display feedback
-		
-    });
+   //      save temporaryTitle on title input
+   $("#saveTitle").click(function ()
+   {
+      $("#editTitleDiv").hide("slow");
+      var a = document.getElementById('temporaryTitle');
+      var b = document.getElementById('title');
+      b.value = a.value;
 
-    //      clear button 
-    $("#clearTitle").click(function () {
-        var a = document.getElementById('temporaryTitle');
-        a.value = '';
-    });
+      //display feedback
 
-    // button style
-    $("input[type=submit], button")
-        .button()
-        .click(function (event) {
-            event.preventDefault();
-        });
+   });
 
-    $(function () {
-        var availableTags = [
-            "ActionScript",
-            "AppleScript",
-            "Asp",
-            "BASIC",
-            "C",
-            "C++"
-        ];
-        $("#sessionEntry").autocomplete({
-            source: availableTags
-        });
-    });
+   //      clear button
+   $("#clearTitle").click(function ()
+   {
+      var a = document.getElementById('temporaryTitle');
+      a.value = '';
+   });
 
-    //		show editHelpTextDiv div 	
-    $("#editHelpTextImage, #help").click(function () {
-        $("#editHelpTextDiv").show("slow");
-    });
+   // button style
+   $("input[type=submit], button")
+            .button()
+            .click(function (event)
+            {
+               event.preventDefault();
+            });
 
-    //		hide editHelpTextDiv div 
-    $("#cancelHelp").click(function () {
-        $("#editHelpTextDiv").hide("slow");
-    });
-	
-	 //		show editInputTypeDiv div 	
-    $("#editInputType, #input").click(function () {
-        $("#editInputTypeDiv").show("slow");
-    });
+   $(function ()
+   {
+      var availableTags = [
+         "ActionScript",
+         "AppleScript",
+         "Asp",
+         "BASIC",
+         "C",
+         "C++"
+      ];
+      $("#sessionEntry").autocomplete({
+         source: availableTags
+      });
+   });
 
-    //		hide editInputTypeDiv div 
-    $("#cancelInputType").click(function () {
-        $("#editInputTypeDiv").hide("slow");
-    });
+   //		show editHelpTextDiv div
+   $("#editHelpTextImage, #help").click(function ()
+   {
+      $("#editHelpTextDiv").show("slow");
+   });
 
-    $("#saveHelp").click(function () {
-        $("#editHelpTextDiv").hide("slow");
-        var a1 = document.getElementById('temporaryHelpText');
-        var b1 = document.getElementById('help');
-        b1.value = a1.value;
-    });
+   //		hide editHelpTextDiv div
+   $("#cancelHelp").click(function ()
+   {
+      $("#editHelpTextDiv").hide("slow");
+   });
 
-    //send Ajax - POST
-    $("#saveQuestion").click(function () {
-        var ajaxObject = {
-            actionType  : "new",
-            name        : $("#sessionName").val(),
-            sessionName : $("#sessionEntry").val(),
-            title       : $("#title").val(),
-            help        : $("#help").val()
-        };
+   //		show editInputTypeDiv div
+   $("#editInputType, #input").click(function ()
+   {
+      $("#editInputTypeDiv").show("slow");
+   });
 
+   //		hide editInputTypeDiv div
+   $("#cancelInputType").click(function ()
+   {
+      $("#editInputTypeDiv").hide("slow");
+   });
 
-        $.ajax({
-            type: "POST",
-            url: "php/QuestionGenerator.php",
-            data: ajaxObject,
-            success: function (response) {
-			
-			    var JSONObject = JSON.parse(response);
-				var feedbackDiv = document.getElementById("feedbackId");
-				
-                if(JSONObject.message == 'Success')
-                {	   
-					feedbackDiv.style.display = 'block';
-					
-				}
-            },
-            error: function () {
-                alert("ERROR !");
+   $("#saveHelp").click(function ()
+   {
+      $("#editHelpTextDiv").hide("slow");
+      var a1 = document.getElementById('temporaryHelpText');
+      var b1 = document.getElementById('help');
+      b1.value = a1.value;
+   });
+
+   //send Ajax - POST
+   $("#saveQuestion").click(function ()
+   {
+      var ajaxObject = {
+         actionType: "new",
+         name: $("#sessionName").val(),
+         sessionName: $("#sessionEntry").val(),
+         title: $("#title").val(),
+         help: $("#help").val()
+      };
+
+      $.ajax({
+         type: "POST",
+         url: "php/QuestionGenerator.php",
+         data: ajaxObject,
+         success: function (response)
+         {
+            var JSONObject = JSON.parse(response);
+            var feedbackDiv = document.getElementById("feedbackId");
+
+            if (JSONObject.message == 'Success')
+            {
+               feedbackDiv.style.display = 'block';
             }
-        });
-    });
+         },
+         error: function ()
+         {
+            alert("ERROR !");
+         }
+      });
+   });
 });
 
