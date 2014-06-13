@@ -195,3 +195,17 @@ body {
 button span{
    font-weight: bold;
 }
+
+.inputHolderDesign
+{
+    background-color: #E7E7E7;
+    border-color: #DDDDDD;
+    display: inline-block;
+    margin: -2px;
+    padding: 4px 12px;
+}
+.inputHolderDesign:active
+{
+    background-color: #BCE954;
+    background-image: none;
+}

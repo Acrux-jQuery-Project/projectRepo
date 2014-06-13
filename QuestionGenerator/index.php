@@ -15,6 +15,7 @@
    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
    <script type="text/javascript" src="js/jquery-ui.js"></script>
    <script type="text/javascript" src="js/custom_jquery.js"></script>
+   <script type="text/javascript" src="js/AddInputHandler.js"></script>
    <!-- end js included -->
 
 </head>
@@ -119,7 +120,7 @@
       <div class="rowQuestion">
          <br clear="all"/>
          Select input types:
-         <select>
+         <select id="selectInputHolder">
             <option value="" selected>Please select...</option>
             <option value="L">Label</option>
             <option value="T">Text</option>
@@ -128,28 +129,15 @@
             <option value="S">Select</option>
             <option value="B">Button</option>
          </select>
-         <button class='margin10' type="button" name="" id="">Add input</button>
+         <button class='margin10' type="button" name="" id="" onclick="addInputAction();">Add input</button>
       </div>
 
       <div class="optionInputPanel" id="selectedInputPanel">
          <br clear="all"/>
-         <input type="radio" id="radio1" name="radios" value="L" checked>
-         <label for="radio1">LABEL</label>
-         <input type="radio" id="radio2" name="radios" value="T">
-         <label for="radio2">TEXT</label>
-         <input type="radio" id="radio3" name="radios" value="R">
-         <label for="radio3">RADIO</label>
-         <input type="radio" id="radio4" name="radios" value="C">
-         <label for="radio4">CHECKBOX</label>
-         <input type="radio" id="radio5" name="radios" value="S">
-         <label for="radio5">SELECT</label>
-         <input type="radio" id="radio6" name="radios" value="B">
-         <label for="radio6">BUTTON</label>
-
 
       </div>
       <br clear="all"/>
-      <fieldset>
+      <fieldset type="label" style="display: none">
          <legend>LABEL</legend>
          <div class="rowQuestion">
             <p class="labelText">Label description: </p>
@@ -171,7 +159,7 @@
       </fieldset>
 
 
-      <fieldset>
+      <fieldset type="text" style="display: none">
          <legend>TEXT</legend>
          <div class="rowQuestion">
             <p class="labelText">Session name:</p>
@@ -185,7 +173,7 @@
          </div>
       </fieldset>
 
-      <fieldset>
+      <fieldset type="radio" style="display: none">
          <legend>RADIO</legend>
          <div class="rowQuestion">
 
@@ -195,16 +183,6 @@
                <input type="text" name="" id="" title="" class="" size="25" value="Session value...">
             </label>
             <br clear="all"/>
-            <label for="radio2">
-               <input id="radio2" name="checkbox" type="radio"/>
-               <input type="text" name="" id="" title="" class="" size="35" value="Choice 2...">
-               <input type="text" name="" id="" title="" class="" size="25" value="Session value...">
-            </label><br clear="all"/>
-            <label for="radio3">
-               <input id="radio3" name="checkbox" type="radio"/>
-               Add more...
-            </label><br clear="all"/>
-            <br clear="all"/>
          </div>
          <div class="rowQuestion textAlignCenter">
             <button class='margin10' type="button" name="" id="">Delete input</button>
@@ -212,7 +190,8 @@
             <button class='margin10' type="button" name="" id="">Save RADIO input</button>
          </div>
       </fieldset>
-      <fieldset>
+
+      <fieldset type="checkbox" style="display: none">
          <legend>CHECKBOX</legend>
          <div class="rowQuestion">
 
@@ -220,18 +199,7 @@
                <input id="checkbox1" name="checkbox" type="checkbox" checked="checked"/>
                <input type="text" name="" id="" title="" class="" size="35" value="Choice 1...">
                <input type="text" name="" id="" title="" class="" size="25" value="Session value...">
-            </label><br clear="all"/>
-
-            <label for="checkbox2">
-               <input id="checkbox2" name="checkbox" type="checkbox"/>
-               <input type="text" name="" id="" title="" class="" size="35" value="Choice 2...">
-               <input type="text" name="" id="" title="" class="" size="25" value="Session value..."></label><br
-               clear="all"/>
-
-            <label for="checkbox3">
-               <input id="checkbox3" name="checkbox" type="checkbox"/>
-               Add more...
-            </label><br clear="all"/>
+            </label>
 
             <br clear="all"/>
          </div>
@@ -243,7 +211,7 @@
       </fieldset>
 
 
-      <fieldset>
+      <fieldset type="select" style="display: none">
          <legend>SELECT</legend>
          <div class="rowQuestion">
             <p class="labelOption">Option 1: </p>
@@ -275,7 +243,7 @@
          </div>
       </fieldset>
 
-      <fieldset>
+      <fieldset type="button" style="display: none">
          <legend>BUTTON</legend>
          <div class="rowQuestion">
             <div class="rowQuestion">
