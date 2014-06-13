@@ -81,15 +81,15 @@ $(document).ready(function ()
       $("#editInputTypeDiv").hide("slow");
    });
 
-   $("#saveHelp").click(function ()
+   /*$("#saveHelp").click(function ()
    {
       $("#editHelpTextDiv").hide("slow");
       var a1 = document.getElementById('temporaryHelpText');
       var b1 = document.getElementById('help');
       b1.value = a1.value;
-   });
+   });*/
 
-   //send Ajax - POST
+   /*//send Ajax - POST
    $("#saveQuestion").click(function ()
    {
       var ajaxObject = {
@@ -119,6 +119,47 @@ $(document).ready(function ()
             alert("ERROR !");
          }
       });
-   });
+   });*/
+
+
+
+
+    jQuery("#saveQuestion").click(function(){
+        sendData();
+    });
+
+    function sendData()
+    {
+
+        var questionObject = {
+            title : "dsa"
+        };
+
+        console.log(questionObject);
+        ajaxRequest(questionObject,"setNewQuestion");
+
+    }
+
+    function ajaxRequest(questionObject,operation)
+    {
+
+        jQuery.ajax({
+            type : "POST",
+            url  : "php/QuestionGenerator.php",
+            data : {
+                operation      : operation,
+                questionObject : questionObject
+            }
+        })
+            .done(function( msg ) {
+                alert( "Data Saved: " + msg );
+            });
+
+    }
+
+
+
+
+
 });
 
