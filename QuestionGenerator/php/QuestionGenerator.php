@@ -1,10 +1,20 @@
 <?php
 
-    // on database success or whatever
-      //$return_arr["status"] = 'saved';
-      $return_arr["message"] = utf8_encode("Success");
+    $operation      = $_POST["operation"];
 
-      echo json_encode($return_arr);
-      exit();
+    if($operation == "setNewQuestion")
+    {
+        $questionObject = $_POST["questionObject"];
+        include_once "Template.php";
+        $def = new CTemplate();
+        $def->writeConfigFile($questionObject,"one","main");
+    }
+
+    if($operation == "getAllQuestions")
+    {
+        include_once "QuestionPicker.php";
+        $questionPicker = new QuestionPicker();
+        print $questionPicker->getAllFiles();
+    }
 
 ?>

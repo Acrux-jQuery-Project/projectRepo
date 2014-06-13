@@ -30,14 +30,14 @@ class CTemplate
     }
 
 
-    function mainFileConfig($keysArray = array(),$name,$type)
+    function writeConfigFile($keysArray = array(),$name,$type)
     {
 
         $this->readTemplateDir($type);
 
         foreach($keysArray as $key => $value)
         {
-            $key = preg_replace("/\//","\\/", $key);
+            $key = strtoupper( preg_replace("/\//","\\/", $key) );
             $this->tmplContent = preg_replace("/\[\%\s*$key\s*\%\]/", $value, $this->tmplContent);
         }
 
