@@ -16,6 +16,7 @@
    <script type="text/javascript" src="js/jquery-ui.js"></script>
    <script type="text/javascript" src="js/custom_jquery.js"></script>
    <script type="text/javascript" src="js/AddInputHandler.js"></script>
+   <script type="text/javascript" src="js/InputClickHandler.js"></script>
    <!-- end js included -->
 
 </head>
@@ -180,6 +181,7 @@
             <label for="radio1">
                <input id="radio1" name="checkbox" type="radio" checked="checked"/>
                <input type="text" name="" id="" title="" class="" size="35" value="Choice 1...">
+               <input type="text" name="" id="" title="" class="" size="30" value="Choice name...">
                <input type="text" name="" id="" title="" class="" size="25" value="Session value...">
             </label>
             <br clear="all"/>
@@ -198,6 +200,7 @@
             <label for="checkbox1">
                <input id="checkbox1" name="checkbox" type="checkbox" checked="checked"/>
                <input type="text" name="" id="" title="" class="" size="35" value="Choice 1...">
+               <input type="text" name="" id="" title="" class="" size="30" value="Choice name...">
                <input type="text" name="" id="" title="" class="" size="25" value="Session value...">
             </label>
 
@@ -213,7 +216,7 @@
 
       <fieldset type="select" style="display: none">
          <legend>SELECT</legend>
-         <div class="rowQuestion">
+         <div class="rowQuestion" optionType="option" optionNumber="0">
             <p class="labelOption">Option 1: </p>
             <input type="text" name="" id="" title="" class="" size="25">
             <span class="labelOption">Session value:</span>
@@ -221,7 +224,7 @@
             <br clear="all"/>
          </div>
 
-         <div class="rowQuestion">
+         <div class="rowQuestion" optionType="option" optionNumber="1">
             <p class="labelOption">Option 2: </p>
             <input type="text" name="" id="" title="" class="" size="25">
             <span class="labelOption">Session value:</span>
@@ -229,9 +232,8 @@
             <br clear="all"/>
          </div>
 
-         <div class="rowQuestion">
+         <div class="rowQuestion" style="border: 1px solid black" onclick="addSelectOption();">
             <p class="labelOption">Add more...</p>
-            <br clear="all"/>
          </div>
 
          <br clear="all"/>
